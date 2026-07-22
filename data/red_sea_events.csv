@@ -1,0 +1,12 @@
+date,event,category,severity,source_id
+2023-11-19,Houthi forces seize the car carrier Galaxy Leader in the southern Red Sea,seizure,3,S-EV1
+2023-12-03,Attacks on multiple commercial vessels (incl. Unity Explorer) in the Bab-el-Mandeb strait,attack,4,S-EV1
+2023-12-14,Missile narrowly misses Maersk Gibraltar; Maersk temporarily suspends Red Sea transit,carrier_suspension,5,S-EV2
+2023-12-16,"Hapag-Lloyd, MSC and CMA CGM divert vessels away from the Red Sea",carrier_suspension,5,S-EV1
+2023-12-18,United States announces multinational Operation Prosperity Guardian,military_action,4,S-EV1
+2024-01-12,United States and United Kingdom launch airstrikes on Houthi targets in Yemen,military_action,5,S-EV3
+2024-01-15,Houthi missile strikes the US-owned bulk carrier Gibraltar Eagle,attack,4,S-EV1
+2024-01-26,Missile strike ignites a fire on the tanker Marlin Luanda in the Gulf of Aden,attack,4,S-EV1
+2024-02-18,The cargo ship Rubymar is struck and begins taking on water,attack,4,S-EV1
+2024-03-02,The Rubymar sinks in the Red Sea after the February attack,attack,4,S-EV1
+2024-03-06,First fatal attack: a strike on the True Confidence kills crew members,attack,5,S-EV1

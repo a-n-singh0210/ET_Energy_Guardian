@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  color: #1a1a18;
+  background: #d9dbe0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Markdown rendering for the Assumptions page */
+.assumptions h1 { font-size: 1.5rem; font-weight: 800; margin: 0 0 0.75rem; }
+.assumptions h2 { font-size: 1.15rem; font-weight: 700; margin: 1.5rem 0 0.5rem; }
+.assumptions h3 { font-size: 1rem; font-weight: 600; margin: 1rem 0 0.4rem; }
+.assumptions p { font-size: 0.9rem; line-height: 1.6; color: #1a1a18cc; margin: 0.5rem 0; }
+.assumptions ul { list-style: disc; padding-left: 1.25rem; font-size: 0.9rem; color: #1a1a18cc; }
+.assumptions li { margin: 0.25rem 0; }
+.assumptions code { background: #EFE6D2; padding: 0.1rem 0.35rem; border-radius: 0.35rem; font-size: 0.82rem; }
+.assumptions blockquote { border-left: 3px solid #F2C14E; padding-left: 0.9rem; color: #1a1a1899; margin: 0.75rem 0; }
+.assumptions table { width: 100%; border-collapse: collapse; margin: 0.75rem 0; font-size: 0.85rem; }
+.assumptions th, .assumptions td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid #00000012; }
+.assumptions th { color: #1a1a1877; font-weight: 600; }
+.assumptions tr:nth-child(even) { background: #FBF7EF; }

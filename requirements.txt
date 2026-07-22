@@ -1,0 +1,23 @@
+# EnergyGuardian AI (v2) — fixed stack per docs/spec.md (Python 3.11).
+# No dependencies beyond this approved list without explicit approval.
+
+# Core data / modelling
+pandas==3.0.3
+numpy==2.5.1
+scikit-learn==1.9.0
+networkx==3.6.1        # supply knowledge graph (supplier-corridor-grade-refinery)
+
+# Plotting & dashboard
+matplotlib==3.11.1
+streamlit==1.59.2
+
+# Data sourcing
+yfinance==1.5.1
+
+# Config / secrets
+python-dotenv==1.2.2
+
+# API layer (user-approved) — serves backend outputs as JSON for a decoupled
+# frontend (api.py). Not part of the original analysis stack.
+flask==3.1.3
+flask-cors

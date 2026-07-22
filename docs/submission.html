@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>EnergyGuardian AI — Submission</title>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap");
+
+  @page { size: A4; margin: 16mm 15mm; }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: "Source Sans 3", -apple-system, system-ui, sans-serif;
+    color: #1f1d18; font-size: 10.6pt; line-height: 1.5; margin: 0;
+  }
+  h1, h2, h3 { font-family: "Poppins", sans-serif; color: #17150f; margin: 0; }
+  h1 { font-size: 25pt; font-weight: 700; letter-spacing: -0.02em; }
+  h2 {
+    font-size: 14pt; font-weight: 600; margin: 22px 0 8px;
+    padding-bottom: 4px; border-bottom: 2px solid #F0C24B;
+  }
+  h2 .num { color: #C79A22; margin-right: 8px; }
+  h3 { font-size: 11.5pt; font-weight: 600; margin: 14px 0 3px; }
+  p { margin: 6px 0; }
+  a { color: #9A7B1E; text-decoration: none; }
+  ul { margin: 6px 0; padding-left: 18px; }
+  li { margin: 3px 0; }
+  strong { color: #17150f; }
+  .lede { font-size: 11.2pt; color: #4a463c; margin: 4px 0 2px; }
+  .tag {
+    display: inline-block; font-family: "Poppins"; font-weight: 600;
+    font-size: 8pt; letter-spacing: 0.12em; text-transform: uppercase;
+    color: #8a6d16; background: #FBF1D2; border-radius: 20px; padding: 3px 11px;
+  }
+  .hdr { border-bottom: 3px solid #17150f; padding-bottom: 12px; margin-bottom: 6px; }
+  .meta { color: #6c675b; font-size: 9.4pt; margin-top: 8px; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: 9.6pt; }
+  th, td { text-align: left; padding: 6px 9px; border-bottom: 1px solid #e7e1d1; vertical-align: top; }
+  th { background: #faf6ea; font-family: "Poppins"; font-weight: 600; font-size: 8.8pt;
+       text-transform: uppercase; letter-spacing: 0.04em; color: #6c675b; }
+  td strong { font-family: "Poppins"; }
+  .callout {
+    background: #faf6ea; border-left: 3px solid #F0C24B; border-radius: 0 8px 8px 0;
+    padding: 9px 14px; margin: 10px 0;
+  }
+  .grid { display: flex; gap: 10px; margin: 8px 0; }
+  .stat { flex: 1; background: #17150f; color: #fdfbf5; border-radius: 10px; padding: 10px 12px; }
+  .stat .n { font-family: "Poppins"; font-weight: 700; font-size: 17pt; color: #F0C24B; line-height: 1; }
+  .stat .l { font-size: 8.6pt; color: #cdc7b5; margin-top: 4px; }
+  .flow { font-family: "Poppins"; font-weight: 600; font-size: 9.4pt; color: #6c675b;
+          background: #faf6ea; border-radius: 8px; padding: 9px 12px; margin: 8px 0; }
+  .flow b { color: #17150f; }
+  footer { margin-top: 20px; padding-top: 8px; border-top: 1px solid #e7e1d1;
+           color: #8a8474; font-size: 8.6pt; }
+  .nobreak { break-inside: avoid; }
+  .cols2 { display: flex; gap: 10px; }
+  .cols2 > div { flex: 1; }
+
+  /* architecture flow */
+  .arch { display: flex; flex-direction: column; align-items: center; margin: 10px 0 4px; }
+  .arch .row { display: flex; gap: 8px; justify-content: center; }
+  .arch .node {
+    font-family: "Poppins"; font-weight: 600; font-size: 9.2pt; color: #2a2720;
+    background: #faf6ea; border: 1px solid #e7ddc0; border-radius: 8px;
+    padding: 7px 14px; text-align: center; min-width: 150px;
+  }
+  .arch .node.in { background: #fff; color: #6c675b; font-weight: 600; min-width: 120px; }
+  .arch .node.hl { background: #17150f; color: #fdfbf5; border-color: #17150f; }
+  .arch .node.hl span { color: #F0C24B; font-size: 8pt; }
+  .arch .arw { color: #C79A22; font-size: 11pt; line-height: 1.1; margin: 1px 0; }
+</style>
+</head>
+<body>
+
+<div class="hdr nobreak">
+  <span class="tag">ET Hackathon · AI-Driven Energy Supply-Chain Resilience</span>
+  <h1 style="margin-top:8px;">EnergyGuardian AI</h1>
+  <p class="lede">An AI-powered decision-support platform for energy supply-chain resilience — built around India and the Strait of Hormuz.</p>
+  <p class="meta">Submission by Aarushi Singh &nbsp;·&nbsp; Repository: github.com/a-n-singh0210/ET_Energy_Guardian</p>
+</div>
+
+<p>EnergyGuardian transforms publicly available geopolitical, logistics, and market signals into transparent risk assessments, scenario analyses, and evidence-backed recommendations that help analysts respond more quickly to emerging disruptions. It is explicitly a decision-support system: every output is explainable and traceable to a documented assumption, and it augments human decision-makers rather than replacing them.</p>
+
+<h2><span class="num">1</span>The problem</h2>
+<p>India imports about <strong>88% of the crude oil it burns</strong>, and close to <strong>half of that</strong> arrives through a single 33-km-wide chokepoint — the Strait of Hormuz. When that lane is threatened, refiners have hours to react and the country holds roughly a <strong>nine-and-a-half-day</strong> strategic cushion. Today the response to a shock is largely manual: analysts read the news, debate severity, and reroute cargoes days later.</p>
+<div class="grid nobreak">
+  <div class="stat"><div class="n">88%</div><div class="l">crude imported</div></div>
+  <div class="stat"><div class="n">~45%</div><div class="l">of imports via Hormuz</div></div>
+  <div class="stat"><div class="n">~9.5 d</div><div class="l">strategic reserve cover</div></div>
+  <div class="stat"><div class="n">+47 d</div><div class="l">slower recovery without a response layer*</div></div>
+</div>
+<p class="meta">*McKinsey estimate for economies lacking a response-intelligence capability. Every figure above is sourced in the in-app Assumptions Register.</p>
+<p>The gap is not data — public signals exist — but a layer that <strong>continuously analyzes those signals</strong>, connects them to physical supply dependencies, and turns them into an explainable, end-to-end response: from signal to recommendation.</p>
+
+<h2><span class="num">2</span>Core innovation — the compound-risk model</h2>
+<p>Traditional monitoring evaluates disruption indicators independently, one threshold at a time. EnergyGuardian introduces a <strong>compound-risk model</strong> that explicitly captures nonlinear interactions between market stress, freight disruption, and geopolitical events. Rather than waiting for a single threshold crossing, the model identifies combinations of individually weak signals whose <em>interaction</em> indicates elevated systemic risk.</p>
+<p>For each day, robust z-score anomalies (median/MAD over a 14-day window, clipped to [-3, 3]) are combined:</p>
+<div class="callout nobreak" style="font-family:'Poppins'; font-size:10pt;">
+  Risk(t) = &Sigma; w<sub>i</sub>·a<sub>i</sub>(t) &nbsp;+&nbsp; &lambda; &Sigma; a<sub>i</sub><sup>+</sup>(t)·a<sub>j</sub><sup>+</sup>(t)
+  <div style="font-family:'Source Sans 3'; font-size:9pt; color:#6c675b; margin-top:5px;">
+    A signed linear term (each signal's own contribution) plus a co-elevation interaction term that fires only when signals are <em>simultaneously</em> elevated. The interaction term is the innovation.
+  </div>
+</div>
+<p>Every recommendation the system produces is accompanied by:</p>
+<ul>
+  <li>the <strong>contributing signals</strong> and their individual weights;</li>
+  <li>the <strong>documented assumptions</strong> behind every parameter;</li>
+  <li><strong>explainable reasoning</strong> — a plain-language account of what drove the score; and</li>
+  <li>a <strong>comparison against a traditional per-signal baseline</strong>.</li>
+</ul>
+
+<h2><span class="num">3</span>System architecture</h2>
+<p>A thin Flask API serves a display-only React dashboard; all computation lives in the backend. Data flows in one direction, signal to recommendation:</p>
+<div class="arch nobreak">
+  <div class="row">
+    <div class="node in">News / RSS</div>
+    <div class="node in">AIS · IMF PortWatch</div>
+    <div class="node in">Public market data</div>
+  </div>
+  <div class="arw">↓</div>
+  <div class="node">LLM extraction (Gemini)</div>
+  <div class="arw">↓</div>
+  <div class="node">Signal processing · robust anomalies</div>
+  <div class="arw">↓</div>
+  <div class="node hl">Compound risk engine &nbsp;<span>← core innovation</span></div>
+  <div class="arw">↓</div>
+  <div class="node">Scenario simulation</div>
+  <div class="arw">↓</div>
+  <div class="node">Knowledge graph — supply dependencies</div>
+  <div class="arw">↓</div>
+  <div class="node">AI decision pipeline — five engines</div>
+  <div class="arw">↓</div>
+  <div class="node">Dashboard + RAG explanations</div>
+</div>
+
+<h2><span class="num">4</span>AI workflow</h2>
+<p>Six AI/analytics capabilities each do a specific job — not decoration. Where a stage is deterministic, it is described as such; the one generative-LLM step is news extraction.</p>
+<table class="nobreak">
+  <tr><th>Component</th><th>Purpose</th></tr>
+  <tr><td><strong>Gemini LLM extraction</strong></td><td>Convert unstructured news (live or pasted) into structured disruption events — corridor, severity, event type, confidence. Transparent keyword fallback offline.</td></tr>
+  <tr><td><strong>Compound risk model</strong></td><td>Evaluate nonlinear interactions between disruption indicators to surface systemic, multi-signal risk.</td></tr>
+  <tr><td><strong>Predictive scenario simulation</strong></td><td>Project the cascade — Brent premium, import gap, refinery run-rate, GDP trajectory — from a given risk posture.</td></tr>
+  <tr><td><strong>AI decision pipeline</strong></td><td>Coordinate five deterministic engines (signal → scenario → procurement → reserve → analogue) over a shared context to generate and explain recommendations; every step's input, reasoning and output is inspectable.</td></tr>
+  <tr><td><strong>Knowledge graph</strong></td><td>Model supplier ↔ corridor ↔ grade ↔ refinery dependencies and trace disruption impact by graph traversal.</td></tr>
+  <tr><td><strong>Retrieval-augmented generation (RAG)</strong></td><td>Provide grounded, cited explanations from a documented energy-security corpus.</td></tr>
+</table>
+<p class="meta">Geospatial intelligence (corridor/chokepoint mapping with AIS-derived tanker traffic) underlies the scenario and knowledge-graph layers. The five-stage pipeline uses the orchestration pattern behind agentic systems, but the stages are deterministic engines — named honestly rather than described as autonomous "AI agents."</p>
+
+<h2><span class="num">5</span>Validation against historical events</h2>
+<p>The compound model was evaluated on the 2023–24 Red Sea / Hormuz period against documented disruption events, not on synthetic data.</p>
+<div class="cols2 nobreak">
+  <div>
+    <h3>Dataset</h3>
+    <ul>
+      <li>Red Sea &amp; Hormuz corridor event log (public reporting)</li>
+      <li>Reuters / news headlines (Google News RSS)</li>
+      <li>AIS-derived chokepoint traffic (IMF PortWatch)</li>
+      <li>Public market data (Brent) and documented freight prints</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Method</h3>
+    <ul>
+      <li><strong>Baseline:</strong> independent per-signal threshold model</li>
+      <li><strong>Metrics:</strong> true positives, false positives, lead time</li>
+      <li><strong>Replay:</strong> historical window, Oct 2023 – Mar 2024</li>
+      <li>10 documented events (severity ≥ 4) as ground truth</li>
+    </ul>
+  </div>
+</div>
+<table class="nobreak">
+  <tr><th>Method</th><th>True positives</th><th>False positives</th><th>Alert days</th></tr>
+  <tr><td>Per-signal baseline</td><td>1</td><td>3</td><td>4</td></tr>
+  <tr><td><strong>Compound model</strong></td><td><strong>3</strong></td><td><strong>2</strong></td><td>5</td></tr>
+</table>
+<p class="meta">The compound model detected 3× the events with fewer false alarms at comparable alert volume. Reported honestly: lead time to the systemic onset is identical for both, and both miss isolated single incidents — the model is built to surface clustered, systemic disruption, and the document says so.</p>
+
+<h2><span class="num">6</span>Business impact &amp; scalability</h2>
+<h3>Primary users</h3>
+<ul>
+  <li>Indian Oil Corporation (IOC)</li>
+  <li>Bharat Petroleum (BPCL)</li>
+  <li>Hindustan Petroleum (HPCL)</li>
+  <li>Strategic Petroleum Reserve operators (ISPRL)</li>
+  <li>Ministry of Petroleum &amp; Natural Gas</li>
+  <li>Energy trading desks</li>
+</ul>
+<h3>Impact &amp; scale</h3>
+<ul>
+  <li><strong>Impact:</strong> compressing the analyse-and-respond loop from days to minutes directly attacks the "+47 days slower recovery" penalty. On India's import volumes, shaving even a few days off a reroute decision during a Brent spike is measured in hundreds of millions of dollars and fractions of a GDP point.</li>
+  <li><strong>Scalability:</strong> the architecture is corridor- and country-agnostic. The same engine extends to LNG, to other importers (Japan, Korea, the EU), and to other chokepoints (Malacca, Bab-el-Mandeb, the Bosphorus) by swapping the data layer — the model and UI are unchanged.</li>
+  <li><strong>Cost:</strong> it runs on free and public data sources and a free LLM tier, so it is deployable today at near-zero marginal cost.</li>
+</ul>
+
+<h2><span class="num">7</span>Limitations</h2>
+<ul>
+  <li>The current implementation evaluates historical and simulated scenarios; operational deployment would require integration with enterprise logistics systems.</li>
+  <li>Some scenario parameters are assumption-based and are explicitly documented in the Assumptions Register (event severity is an assigned ordinal; the freight signal is sparse, with forward-filling stated as a modelling choice, not fabricated data).</li>
+  <li>Procurement recommendations are intended as decision support, not automated execution.</li>
+  <li>Model performance has been demonstrated on public historical events and should be further validated with proprietary operational datasets before production deployment.</li>
+  <li>The only generative-LLM use is extracting structured signals from news; it never computes a risk number, and explanations are fully deterministic templates.</li>
+</ul>
+
+<h2><span class="num">8</span>Conclusion</h2>
+<p>EnergyGuardian demonstrates how explainable AI can improve energy supply-chain resilience by transforming heterogeneous public information into transparent operational intelligence. Rather than replacing human decision-makers, the platform enables analysts to:</p>
+<ul>
+  <li>identify emerging disruption patterns,</li>
+  <li>evaluate cascading impacts,</li>
+  <li>explore alternative response scenarios, and</li>
+  <li>understand the reasoning behind every recommendation.</li>
+</ul>
+<p>The architecture is modular, explainable, and readily extensible to additional countries, commodities, and transport corridors, making it a practical foundation for next-generation energy-resilience systems.</p>
+
+<footer>
+  EnergyGuardian AI · ET Hackathon submission · github.com/a-n-singh0210/ET_Energy_Guardian · All data sources cited in docs/ and the in-app Assumptions Register.
+</footer>
+
+</body>
+</html>
