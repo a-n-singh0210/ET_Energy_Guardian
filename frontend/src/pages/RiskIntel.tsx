@@ -76,7 +76,7 @@ export default function RiskIntel({ onSimulate }: { onSimulate: (h: number, r: n
           </button>
         </div>
         <div className="text-xs text-ink/40 mt-1">
-          Source: Google News RSS (live) → {data.method === "gemini" ? "Gemini LLM extraction" : "keyword extraction (set GEMINI_API_KEY — free — for LLM)"}. Scores are recency-weighted severity × confidence.
+          Source: Google News RSS (live) → {data.method === "gemini" ? "Gemini LLM extraction" : data.method === "groq" ? "Groq LLM extraction" : data.method === "anthropic" ? "Anthropic LLM extraction" : "keyword extraction"}
         </div>
       </Card>
 
